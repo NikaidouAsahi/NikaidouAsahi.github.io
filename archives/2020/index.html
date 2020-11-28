@@ -555,27 +555,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>洛谷 P2181 对角线</strong></p>
-<p><strong>题目描述：</strong><br>对于一个 n 个顶点的凸多边形，它的任何三条对角线都不会交于一点。请求出图形中对角线交点的个数。<br>例如，66 边形：</p>
+<p><strong>题目描述：</strong><br>对于一个 n 个顶点的凸多边形，它的任何三条对角线都不会交于一点。请求出图形中对角线交点的个数。<br>例如，6 边形：</p>
 <p><img src="https://cdn.luogu.com.cn/upload/pic/6023.png" alt="img"></p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入只有一行一个整数 n<em>n</em>，代表边数。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一行一个整数代表答案。</p>
-<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p>输入3           输出5</p>
-<p>输入6          输出15</p>
-<h2 id="说明-提示"><a href="#说明-提示" class="headerlink" title="说明/提示"></a>说明/提示</h2><h4 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h4><ul>
-<li>对于 50% 的数据，保证 3&lt;=n&lt;=100</li>
-<li>对于100% 的数据，保证 3&lt;=n&lt;=1e5</li>
-</ul>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,n*(n<span class="number">-1</span>)/<span class="number">2</span>*(n<span class="number">-2</span>)/<span class="number">3</span>*(n<span class="number">-3</span>)/<span class="number">4</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><p>纯数学问题，不过要注意题目：<strong>它的任何三条对角线都不会交于一点</strong>，也就是说一个交点只会由两条对角线形成。而两条对角线对应四个顶点。则该题可以转换成n个顶点选4个顶点，即C(n,4)。</p>
-<p>这又会引出另一个问题，直接算C(n,4)= n!/4!(n-4)! = n(n-1)(n-2)(n-3)/4! 肯定爆数，那就只能把他拆成n(n-1)/2(n-2)/3*(n-3)/4。</p>
-<p>还有，多边形必是正数边，故用long long会出错，要用无符号型。</p>
-
       
     </div>
     
+      
+        <div class="button readmore">
+          <a href="/2020/11/28/%E6%B4%9B%E8%B0%B7%20P2181%20%E5%AF%B9%E8%A7%92%E7%BA%BF/">
+            阅读全文 <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
       
     
   </section>
